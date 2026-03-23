@@ -1,0 +1,19 @@
+#-*-program to calculate daily expenses
+"""
+Created on Mon Mar 23 15:56:38 2026
+
+@author: shraddha mahajan 
+"""
+
+import csv
+from datetime import date
+
+def add_expense(amount, description):
+    today = date.today().isoformat()
+    
+    with open("expenses.csv", "a", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow([today, amount, description])
+
+# Example usage
+add_expense(150, "Snacks")
