@@ -1,0 +1,17 @@
+ # program to create astudent attendance
+"""
+Created on Tue Mar 24 09:27:48 2026
+
+@author: shraddha mahajan
+"""
+
+import csv
+import os
+
+file_name = "attendance.csv"
+
+# Create file with header if it doesn't exist
+if not os.path.exists(file_name):
+    with open(file_name, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Date", "Student Name", "Status"])a
