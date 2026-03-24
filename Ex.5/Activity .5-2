@@ -1,0 +1,22 @@
+# program to shop inventory dictionary
+"""
+Created on Tue Mar 24 11:13:03 2026
+
+@author: shraddha mahajan 
+"""
+
+# Shop inventory dictionary
+inventory = {
+    "Apples": 50,
+    "Bananas": 30,
+    "Oranges": 20
+}
+
+# Add new stock to an existing item
+inventory["Apples"] += 25   # Adds 25 more apples
+
+# Add a completely new item
+inventory["Grapes"] = 40
+
+# Print updated inventory
+print(inventory)
