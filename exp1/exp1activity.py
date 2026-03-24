@@ -1,7 +1,7 @@
 """
 Created on Tue Feb  3 10:41:34 2026
 
-@author: User
+@author: SHRADDHA MAHAJAN
 """
 
 num1 = int(input("Enter First Number:"))
