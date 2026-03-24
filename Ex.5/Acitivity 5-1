@@ -1,0 +1,19 @@
+#program to library dictionary
+"""
+Created on Tue Mar 24 11:06:14 2026
+
+@author: shraddha mahajan
+"""
+
+# Library dictionary
+library = {
+    "Python Basics": 300,
+    "Data Structures": 450,
+    "AI Fundamentals": 600
+}
+
+# Update price of a book
+library["Data Structures"] = 500
+
+# Print updated dictionary
+print(library)
