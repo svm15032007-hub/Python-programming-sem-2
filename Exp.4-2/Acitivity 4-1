@@ -1,0 +1,17 @@
+#program  story marks in list
+"""
+Created on Wed Mar 25 08:42:53 2026
+
+@author: sgraddha mahajan
+"""
+
+marks = [78, 85, 92, 67, 88]
+
+# Average
+average = sum(marks) / len(marks)
+
+# Topper
+topper = max(marks)
+
+print("Average marks:", average)
+print("Topper marks:", topper)
