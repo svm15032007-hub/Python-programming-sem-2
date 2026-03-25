@@ -1,0 +1,15 @@
+# program to input feedback message-
+"""
+Created on Wed Mar 25 16:29:08 2026
+
+@author: shraddha mahajan
+"""
+
+# Input feedback message
+feedback = input("Enter customer feedback: ")
+
+# Reverse the message
+reversed_feedback = feedback[::-1]
+
+# Display result
+print("Reversed Feedback:", reversed_feedback)
