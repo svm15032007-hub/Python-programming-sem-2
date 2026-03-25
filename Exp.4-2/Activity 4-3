@@ -1,0 +1,16 @@
+# program to remov duplicate mobile numbers
+"""
+Created on Wed Mar 25 16:33:32 2026
+
+@author: shraddha mahajan
+"""
+
+# Remove duplicate mobile numbers (preserves order)
+numbers = ["9876543210", "9123456780", "9876543210", "9988776655"]
+
+unique_numbers = []
+for num in numbers:
+    if num not in unique_numbers:
+        unique_numbers.append(num)
+
+print("Unique Mobile Numbers:", unique_numbers)
