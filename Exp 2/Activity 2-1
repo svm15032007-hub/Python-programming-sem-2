@@ -1,0 +1,15 @@
+# progran to chake movie entry eligibility
+"""
+Created on Wed Mar 25 16:50:07 2026
+
+@author: shraddha mahajan
+"""
+
+# Check movie entry eligibility
+
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("Eligible for entry")
+else:
+    print("Not eligible for entry")
