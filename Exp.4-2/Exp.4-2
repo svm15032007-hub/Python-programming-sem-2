@@ -1,0 +1,13 @@
+#program to taking input from the user
+"""
+Created on Wed Mar 25 08:37:57 2026
+
+@author: shraddha mahajan
+"""
+
+# Take input from the user
+string = input("Enter a string: ")
+# Reverse the string using slicing
+reversed_string = string[::-1]
+# Print the result
+print("Reversed string:", reversed_string)
