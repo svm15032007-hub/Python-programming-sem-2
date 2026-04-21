@@ -1,0 +1,59 @@
+# create a Student class that calculates grade
+"""
+Created on Tue Apr 21 10:56:47 2026
+
+@author: Shraddha mahajan
+"""
+
+class Student:
+    def __init__(self, name, scores):
+        """Initialize the student with their name and a list of scores."""
+        self.name = name
+        self.scores = scores
+
+    def calculate_average(self):
+        """Calculate the average score of the student."""
+        if len(self.scores) > 0:
+            return sum(self.scores) / len(self.scores)
+        else:
+            return 0
+
+    def calculate_grade(self):
+        """Calculate the grade based on the average score."""
+        avg_score = self.calculate_average()
+        if avg_score >= 90:
+            return 'A'
+        elif avg_score >= 80:
+            return 'B'
+        elif avg_score >= 70:
+            return 'C'
+        elif avg_score >= 60:
+            return 'D'
+        else:
+            return 'F'
+
+    def display_report(self):
+        """Display the student's name, scores, average, and grade."""
+        avg_score = self.calculate_average()
+        grade = self.calculate_grade()
+        print(f"Student: {self.name}")
+        print(f"Scores: {self.scores}")
+        print(f"Average Score: {avg_score:.2f}")
+        print(f"Grade: {grade}")
+
+# Example Usage:
+student1 = Student("John", [85, 92, 78, 88])
+student1.display_report()
+# Output:
+# Student: John
+# Scores: [85, 92, 78, 88]
+# Average Score: 85.75
+# Grade: B
+
+student2 = Student("Alice", [50, 65, 60, 45])
+student2.display_report()
+# Output:
+# Student: Alice
+# Scores: [50, 65, 60, 45]
+# Average Score: 55.00
+# Grade: F
