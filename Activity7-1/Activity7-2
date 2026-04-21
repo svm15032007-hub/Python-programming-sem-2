@@ -1,0 +1,45 @@
+# create an employee class that calculates salary with bonus
+"""
+Created on Tue Apr 21 10:51:21 2026
+
+@author: Shraddha mahajan
+"""
+
+class Employee:
+    def __init__(self, name, base_salary, bonus_percentage=0):
+        """Initialize an employee with their name, base salary, and optional bonus percentage."""
+        self.name = name
+        self.base_salary = base_salary
+        self.bonus_percentage = bonus_percentage
+
+    def calculate_salary(self):
+        """Calculate the total salary including the bonus."""
+        bonus = self.base_salary * (self.bonus_percentage / 100)
+        total_salary = self.base_salary + bonus
+        return total_salary
+
+    def display_salary(self):
+        """Print the employee's salary breakdown."""
+        total_salary = self.calculate_salary()
+        bonus = total_salary - self.base_salary
+        print(f"Employee: {self.name}")
+        print(f"Base Salary: ${self.base_salary}")
+        print(f"Bonus: ${bonus:.2f}")
+        print(f"Total Salary: ${total_salary:.2f}")
+
+# Example Usage:
+employee1 = Employee("Alice", 5000, 10)
+employee1.display_salary()  
+# Output:
+# Employee: Alice
+# Base Salary: $5000
+# Bonus: $500.00
+# Total Salary: $5500.00
+
+employee2 = Employee("Bob", 4000)
+employee2.display_salary()  
+# Output:
+# Employee: Bob
+# Base Salary: $4000
+# Bonus: $0.00
+# Total Salary: $4000.00
