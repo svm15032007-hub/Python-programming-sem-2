@@ -1,0 +1,48 @@
+ create a bankaccount class for deposit and withdrawal
+"""
+Created on Tue Apr 21 10:30:31 2026
+
+@author: shraddha mahajan
+"""
+
+class BankAccount:
+    def __init__(self, account_holder, initial_balance=0):
+        """Initialize a new bank account with the given account holder and initial balance."""
+        self.account_holder = account_holder
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        """Deposit the given amount into the account."""
+        if amount > 0:
+            self.balance += amount
+            print(f"Deposited {amount}. New balance is {self.balance}.")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        """Withdraw the given amount from the account if there are sufficient funds."""
+        if amount > 0:
+            if amount <= self.balance:
+                self.balance -= amount
+                print(f"Withdrew {amount}. New balance is {self.balance}.")
+            else:
+                print("Insufficient funds for this withdrawal.")
+        else:
+            print("Withdrawal amount must be positive.")
+
+    def get_balance(self):
+        """Return the current balance of the account."""
+        return self.balance
+
+    def __str__(self):
+        """Return a string representation of the bank account."""
+        return f"Account holder: {self.account_holder}, Balance: {self.balance}"
+
+# Example Usage:
+account = BankAccount("John Doe", 1000)
+print(account)  # Account holder: John Doe, Balance: 1000
+
+account.deposit(500)  # Deposited 500. New balance is 1500.
+account.withdraw(200)  # Withdrew 200. New balance is 1300.
+account.withdraw(1500)  # Insufficient funds for this withdrawal.
+print(account.get_balance())  # 1300
