@@ -1,0 +1,17 @@
+# Program for import of datetime
+"""
+Created on Tue Apr 28 11:07:32 2026
+
+@author:Shraddha mahajan
+"""
+
+import datetime
+# Get current date and time
+now = datetime.datetime.now()
+# Print current date
+print("Current Date:", now.strftime("%Y-%m-%d"))
+# Print current time
+print("Current Time:", now.strftime("%H:%M:%S"))
+
+# Print current weekday
+print("Weekday:", now.strftime("%A"))
