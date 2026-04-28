@@ -1,0 +1,20 @@
+# ATM withdraeal system handies insufficient balance
+"""
+Created on Tue Apr 28 10:27:38 2026
+
+@author: Shraddha mahajan
+"""
+
+# ATM Withdrawal System
+
+balance = 10000   # Initial balance
+
+print("Welcome to ATM")
+withdraw = int(input("Enter amount to withdraw: "))
+
+if withdraw <= balance:
+    balance -= withdraw
+    print("Transaction Successful")
+    print("Remaining Balance:", balance)
+else:
+    print("Insufficient Balance")
