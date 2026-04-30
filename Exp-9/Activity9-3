@@ -1,0 +1,18 @@
+# Display today date in a hospital appointment system
+"""
+Created on Thu Apr 30 09:41:43 2026
+
+@author: Shraddha mahajan
+"""
+
+from datetime import datetime
+
+def show_today_date():
+    today = datetime.now()
+    formatted_date = today.strftime("%d-%m-%Y")
+    
+    print("=== Hospital Appointment System ===")
+    print("Today's Date:", formatted_date)
+
+# Run function
+show_today_date()
