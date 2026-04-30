@@ -1,0 +1,25 @@
+# Calculate distance using math formulas
+"""
+Created on Thu Apr 30 09:45:17 2026
+
+@author: Shraddha mahajan
+"""
+
+import math
+
+def calculate_distance():
+    try:
+        x1 = float(input("Enter x1: "))
+        y1 = float(input("Enter y1: "))
+        x2 = float(input("Enter x2: "))
+        y2 = float(input("Enter y2: "))
+
+        distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+        print("Distance between points:", distance)
+
+    except ValueError:
+        print("Invalid input! Please enter numbers only.")
+
+# Run function
+calculate_distance()
