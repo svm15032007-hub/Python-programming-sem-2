@@ -1,0 +1,50 @@
+# Create asafe calculator using exception handling
+"""
+Created on Thu Apr 30 09:35:58 2026
+
+@author:s\ Shraddha mahajan
+"""
+
+def safe_calculator():
+    print("=== Safe Calculator ===")
+
+    while True:
+        try:
+            print("\nOperations: +  -  *  /  %  **")
+            op = input("Enter operator (or 'q' to quit): ")
+
+            if op.lower() == 'q':
+                print("Calculator closed.")
+                break
+
+            if op not in ['+', '-', '*', '/', '%', '**']:
+                print("Invalid operator. Try again.")
+                continue
+
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+            if op == '+':
+                result = num1 + num2
+            elif op == '-':
+                result = num1 - num2
+            elif op == '*':
+                result = num1 * num2
+            elif op == '/':
+                result = num1 / num2
+            elif op == '%':
+                result = num1 % num2
+            elif op == '**':
+                result = num1 ** num2
+
+            print("Result:", result)
+
+        except ValueError:
+            print("Error: Please enter valid numbers.")
+        except ZeroDivisionError:
+            print("Error: Cannot divide or mod by zero.")
+        except Exception as e:
+            print("Unexpected error:", e)
+
+# Run program
+safe_calculator()
